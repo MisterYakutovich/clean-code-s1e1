@@ -17,11 +17,6 @@ body {
     font-family: fantasy, cursive;
 }
 
-@media (max-width:768px) {
-.eisenhower-matrix { 
-    text-align: center;
-}
-}
 .centered-main {
     display: block;
     width: 500px;
@@ -91,7 +86,7 @@ label[for="new-task"] {
     display: block;
     margin: 0 0 20px;
 }
-input#new-task {
+#new-task {
     width: 318px;
 }
 
@@ -140,11 +135,16 @@ input#new-task {
     display: none;
 }
 
-.editMode input[type="text"] {
+.centered-main__iteme_active input[type="text"] {
     display: inline-block;
     width: 224px;
 }
 
-.editMode label {
+.centered-main__iteme_active label {
     display: none;
+}
+@media (max-width:768px) {
+  .eisenhower-matrix { 
+        text-align: center;
+  }
 }
