@@ -45,7 +45,10 @@ var createNewTaskElement=function(taskString){
 
     deleteButton.className="delete";
     deleteButtonImg.src='./remove.svg';
+    deleteButtonImg.className="centered-main__item-img"
     deleteButton.appendChild(deleteButtonImg);
+
+    listItem.className="centered-main__item"
 
 
     //and appending.
@@ -85,7 +88,7 @@ var editTask=function(){
     var editInput=listItem.querySelector('input[type=text]');
     var label=listItem.querySelector("label");
     var editBtn=listItem.querySelector(".edit");
-    var containsClass=listItem.classList.contains("editMode");
+    var containsClass=listItem.classList.contains("centered-main__iteme_active");
     //If class of the parent is .editmode
     if(containsClass){
 
@@ -99,7 +102,7 @@ var editTask=function(){
     }
 
     //toggle .editmode on the parent.
-    listItem.classList.toggle("editMode");
+    listItem.classList.toggle("centered-main__iteme_active");
 };
 
 
